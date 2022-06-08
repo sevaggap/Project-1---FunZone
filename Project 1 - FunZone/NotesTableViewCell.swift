@@ -10,6 +10,14 @@ import UIKit
 class NotesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var notesTitle: UILabel!
+    var noteId : Int64 = 0
+    
+    @IBAction func deleteButton(_ sender: Any) {
+        NoteDBHelper.notes.deleteNote(noteId: noteId)
+        NoteViewController.notes = NoteDBHelper.notes.getNotes()
+        NoteViewController.tableObj.reloadData()
+        
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

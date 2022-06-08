@@ -11,24 +11,30 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     class Book {
         var title : String
-        var author : String
+        var fileName : String
         
-        init(title : String, author : String){
+        init(title : String, fileName : String){
             self.title = title
-            self.author = author
+            self.fileName = fileName
         }
     }
     
     var books = [Book]()
     
+    func addBooks(){
+        books = []
+        books.append(Book.init(title: "Dash Diet", fileName: "Dash Diet"))
+        books.append(Book.init(title: "Communication and the Self-Concept: Who are You?", fileName: "Communication and the Self-Concept Who are you?"))
+        books.append(Book.init(title: "Data Management and Human Resource Systems", fileName: "Data Management and Human Resource Systems"))
+        books.append(Book.init(title: "What is an HRIS System?", fileName: "What is an HRIS System?"))
+        books.append(Book.init(title: "Organizational Behavior", fileName: "Organizational Behavior"))
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        books.append(Book.init(title: "milk and honey", author: "Rupi Kuar"))
-        books.append(Book.init(title: "home body", author: "Rupi Kuar"))
-        books.append(Book.init(title: "Heartstopper", author: "Alice Oseman"))
-        books.append(Book.init(title: "Strange Planet", author: "Nathan W Pyle"))
+        addBooks()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -37,50 +43,28 @@ class BookViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if(collectionView.restorationIdentifier != "second"){
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BookCollectionViewCell
-        
 
         cell.bookTitle.text = books[indexPath.row].title
-        cell.bookAuthor.text = books[indexPath.row].author
         cell.bookImage.image = UIImage(systemName: "book.fill")
-        cell.backgroundColor = UIColor.white
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 20
         
         return cell
-        } else {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! BookCollectionViewCell
-            
-            cell.secondCollectionLabel.text = "test"
-            cell.backgroundColor = UIColor.white
-            cell.layer.borderWidth = 1
-            cell.layer.cornerRadius = 20
-            
-            return cell
-        }
         
     }
-    
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let pdfScreenVC = storyboard.instantiateViewController(withIdentifier: "pdfView") as! PDFViewController
+        pdfScreenVC.pdfName = books[indexPath.row].fileName
+        self.present(pdfScreenVC, animated: true, completion: nil)
     }
-    */
-
 }
+
 
 extension BookViewController : UICollectionViewDelegateFlowLayout{
     
-    // write sizeForItemAt -> will bring this function which should return a CGSize with width and height
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 128, height: 128)
+        return CGSize(width: 120, height: 180)
     }
     
 }

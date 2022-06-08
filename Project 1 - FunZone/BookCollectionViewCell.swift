@@ -10,7 +10,5 @@ import UIKit
 class BookCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var bookTitle: UILabel!
-    @IBOutlet weak var bookAuthor: UILabel!
-    
-    @IBOutlet weak var secondCollectionLabel: UILabel!
+        
 }

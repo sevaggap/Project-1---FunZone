@@ -15,22 +15,30 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var signUpLabel: UILabel!
     
     @IBAction func signUpHandler(_ sender: Any) {
-        let username = username.text!
-        let password = password.text!
-        let confirmPassword = confirmPassword.text!
         
-        if(password == confirmPassword) {
+        if(username == nil || password == nil || confirmPassword == nil){
+            signUpLabel.text = "You didn't enter anything!"
+        } else {
+        var data = UserDBHelper.users.signUp(username: username.text!, password: password.text!, confirmPassword: confirmPassword.text!)
+        
+        print(data)
+        if(data){
+            signUpLabel.text = "User created! Please login on the previous page!"
+//            let welcomeScreen = storyboard?.instantiateViewController(withIdentifier: "tabs")
+//            navigationController?.pushViewController(welcomeScreen!, animated: true)
+        } else {
+            signUpLabel.text = "Passwords do not match, try again!"
+        }
             
-            let welcomeScreen = storyboard?.instantiateViewController(withIdentifier: "tabs")
-            navigationController?.pushViewController(welcomeScreen!, animated: true)
+        }
+      
+            
             
 //            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 //            let welcomeScreen = storyBoard.instantiateViewController(withIdentifier: "tabs")
 //            present(welcomeScreen, animated: true, completion: nil)
             
-        } else {
-            signUpLabel.text = "The passwords don't match"
-        }
+       
     }
     
     

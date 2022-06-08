@@ -8,40 +8,49 @@
 import UIKit
 
 class NoteViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    // static makes the variable avialable across application
+    static var notes = [UsersNotes]()
+
+    @IBOutlet weak var table: UITableView!
+    
+    static var tableObj : UITableView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        NoteViewController.notes = NoteDBHelper.notes.getNotes()
+        table.reloadData()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        NoteViewController.notes = NoteDBHelper.notes.getNotes()
+        NoteViewController.tableObj = table
+
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        NoteViewController.notes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! NotesTableViewCell
         
-        cell.notesTitle.text = "test"
-        
+        cell.notesTitle.text = NoteViewController.notes[indexPath.row].title
+        cell.noteId =  NoteViewController.notes[indexPath.row].noteId
+    
         return cell
     }
     
     //use this function to do something when you press the row - like to to the actual view with the title and body of the notes
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("test")
+                
+        let updateNoteScreen = storyboard?.instantiateViewController(withIdentifier: "updateNote") as! UpdateNoteViewController
+        updateNoteScreen.titleData = NoteViewController.notes[indexPath.row].title
+        updateNoteScreen.bodyData = NoteViewController.notes[indexPath.row].body
+        updateNoteScreen.noteId = NoteViewController.notes[indexPath.row].noteId
+        navigationController?.pushViewController(updateNoteScreen, animated: true)
     }
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

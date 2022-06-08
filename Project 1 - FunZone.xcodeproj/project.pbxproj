@@ -10,6 +10,7 @@
 		940A922828400E8600BDEC9D /* MusicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A922728400E8600BDEC9D /* MusicTableViewCell.swift */; };
 		940A922A2840135300BDEC9D /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A92292840135300BDEC9D /* BookCollectionViewCell.swift */; };
 		940A922C28402F1500BDEC9D /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A922B28402F1500BDEC9D /* NotesTableViewCell.swift */; };
+		9451F2382849A1DC00EE859A /* PDFViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9451F2372849A1DC00EE859A /* PDFViewController.swift */; };
 		94643E0A283ECC47000E9A56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94643E09283ECC47000E9A56 /* AppDelegate.swift */; };
 		94643E0C283ECC47000E9A56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94643E0B283ECC47000E9A56 /* SceneDelegate.swift */; };
 		94643E0E283ECC47000E9A56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94643E0D283ECC47000E9A56 /* ViewController.swift */; };
@@ -22,12 +23,33 @@
 		94643E24283ED216000E9A56 /* BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94643E23283ED216000E9A56 /* BookViewController.swift */; };
 		94643E26283ED21E000E9A56 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94643E25283ED21E000E9A56 /* SearchViewController.swift */; };
 		94643E28283ED225000E9A56 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94643E27283ED225000E9A56 /* NoteViewController.swift */; };
+		946B23352846BD9A00BC7B9D /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 946B23332846BD9A00BC7B9D /* Data.xcdatamodeld */; };
+		946B23372846BE6100BC7B9D /* UserDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B23362846BE6100BC7B9D /* UserDBHelper.swift */; };
+		946B233A2846C30600BC7B9D /* Users+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B23382846C30600BC7B9D /* Users+CoreDataClass.swift */; };
+		946B233B2846C30600BC7B9D /* Users+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B23392846C30600BC7B9D /* Users+CoreDataProperties.swift */; };
+		946B233D2846C7CE00BC7B9D /* NoteDBHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B233C2846C7CE00BC7B9D /* NoteDBHelper.swift */; };
+		946B23442846CABA00BC7B9D /* UsersNotes+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B23422846CABA00BC7B9D /* UsersNotes+CoreDataClass.swift */; };
+		946B23452846CABA00BC7B9D /* UsersNotes+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946B23432846CABA00BC7B9D /* UsersNotes+CoreDataProperties.swift */; };
+		947E68FC284C4716002B60F0 /* Data Management and Human Resource Systems.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 947E68F7284C4716002B60F0 /* Data Management and Human Resource Systems.pdf */; };
+		947E68FD284C4716002B60F0 /* Dash Diet.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 947E68F8284C4716002B60F0 /* Dash Diet.pdf */; };
+		947E68FE284C4716002B60F0 /* Communication and the Self-Concept Who are you?.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 947E68F9284C4716002B60F0 /* Communication and the Self-Concept Who are you?.pdf */; };
+		947E68FF284C4716002B60F0 /* Organizational Behavior.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 947E68FA284C4716002B60F0 /* Organizational Behavior.pdf */; };
+		947E6900284C4716002B60F0 /* What is an HRIS System?.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 947E68FB284C4716002B60F0 /* What is an HRIS System?.pdf */; };
+		948957FC284DA345009EEBBE /* Miley Cyrus - Party in the U.S.A..mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 948957F7284DA345009EEBBE /* Miley Cyrus - Party in the U.S.A..mp3 */; };
+		948957FD284DA345009EEBBE /* Chanel - SloMo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 948957F8284DA345009EEBBE /* Chanel - SloMo.mp3 */; };
+		948957FE284DA345009EEBBE /* Taylor Swift - Paper Rings.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 948957F9284DA345009EEBBE /* Taylor Swift - Paper Rings.mp3 */; };
+		948957FF284DA345009EEBBE /* The Weeknd, Ariana Grande - Save Your Tears (with Ariana Grande) (Remix).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 948957FA284DA345009EEBBE /* The Weeknd, Ariana Grande - Save Your Tears (with Ariana Grande) (Remix).mp3 */; };
+		94895800284DA345009EEBBE /* TWICE - The Feels.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 948957FB284DA345009EEBBE /* TWICE - The Feels.mp3 */; };
+		94A822CF2849529A00A2C1AD /* MusicPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A822CE2849529A00A2C1AD /* MusicPlayerViewController.swift */; };
+		94BC0B272846DA55007E2BE4 /* UpdateNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BC0B262846DA55007E2BE4 /* UpdateNoteViewController.swift */; };
+		94D39C8C284172BC00F5C51A /* AddNoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D39C8B284172BC00F5C51A /* AddNoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		940A922728400E8600BDEC9D /* MusicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicTableViewCell.swift; sourceTree = "<group>"; };
 		940A92292840135300BDEC9D /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		940A922B28402F1500BDEC9D /* NotesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
+		9451F2372849A1DC00EE859A /* PDFViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFViewController.swift; sourceTree = "<group>"; };
 		94643E06283ECC47000E9A56 /* Project 1 - FunZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project 1 - FunZone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94643E09283ECC47000E9A56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		94643E0B283ECC47000E9A56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +64,26 @@
 		94643E23283ED216000E9A56 /* BookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewController.swift; sourceTree = "<group>"; };
 		94643E25283ED21E000E9A56 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		94643E27283ED225000E9A56 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		946B23342846BD9A00BC7B9D /* UserData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserData.xcdatamodel; sourceTree = "<group>"; };
+		946B23362846BE6100BC7B9D /* UserDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDBHelper.swift; sourceTree = "<group>"; };
+		946B23382846C30600BC7B9D /* Users+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataClass.swift"; sourceTree = "<group>"; };
+		946B23392846C30600BC7B9D /* Users+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Users+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		946B233C2846C7CE00BC7B9D /* NoteDBHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDBHelper.swift; sourceTree = "<group>"; };
+		946B23422846CABA00BC7B9D /* UsersNotes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersNotes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		946B23432846CABA00BC7B9D /* UsersNotes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UsersNotes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		947E68F7284C4716002B60F0 /* Data Management and Human Resource Systems.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Data Management and Human Resource Systems.pdf"; path = "../../../FunZone Books/Data Management and Human Resource Systems.pdf"; sourceTree = "<group>"; };
+		947E68F8284C4716002B60F0 /* Dash Diet.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Dash Diet.pdf"; path = "../../../FunZone Books/Dash Diet.pdf"; sourceTree = "<group>"; };
+		947E68F9284C4716002B60F0 /* Communication and the Self-Concept Who are you?.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Communication and the Self-Concept Who are you?.pdf"; path = "../../../FunZone Books/Communication and the Self-Concept Who are you?.pdf"; sourceTree = "<group>"; };
+		947E68FA284C4716002B60F0 /* Organizational Behavior.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Organizational Behavior.pdf"; path = "../../../FunZone Books/Organizational Behavior.pdf"; sourceTree = "<group>"; };
+		947E68FB284C4716002B60F0 /* What is an HRIS System?.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "What is an HRIS System?.pdf"; path = "../../../FunZone Books/What is an HRIS System?.pdf"; sourceTree = "<group>"; };
+		948957F7284DA345009EEBBE /* Miley Cyrus - Party in the U.S.A..mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Miley Cyrus - Party in the U.S.A..mp3"; path = "../../../Project 1 - FunZone Files/Music/Miley Cyrus - Party in the U.S.A..mp3"; sourceTree = "<group>"; };
+		948957F8284DA345009EEBBE /* Chanel - SloMo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Chanel - SloMo.mp3"; path = "../../../Project 1 - FunZone Files/Music/Chanel - SloMo.mp3"; sourceTree = "<group>"; };
+		948957F9284DA345009EEBBE /* Taylor Swift - Paper Rings.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Taylor Swift - Paper Rings.mp3"; path = "../../../Project 1 - FunZone Files/Music/Taylor Swift - Paper Rings.mp3"; sourceTree = "<group>"; };
+		948957FA284DA345009EEBBE /* The Weeknd, Ariana Grande - Save Your Tears (with Ariana Grande) (Remix).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "The Weeknd, Ariana Grande - Save Your Tears (with Ariana Grande) (Remix).mp3"; path = "../../../Project 1 - FunZone Files/Music/The Weeknd, Ariana Grande - Save Your Tears (with Ariana Grande) (Remix).mp3"; sourceTree = "<group>"; };
+		948957FB284DA345009EEBBE /* TWICE - The Feels.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "TWICE - The Feels.mp3"; path = "../../../Project 1 - FunZone Files/Music/TWICE - The Feels.mp3"; sourceTree = "<group>"; };
+		94A822CE2849529A00A2C1AD /* MusicPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicPlayerViewController.swift; sourceTree = "<group>"; };
+		94BC0B262846DA55007E2BE4 /* UpdateNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateNoteViewController.swift; sourceTree = "<group>"; };
+		94D39C8B284172BC00F5C51A /* AddNoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,9 +97,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9451F21B284989DE00EE859A /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				948957F8284DA345009EEBBE /* Chanel - SloMo.mp3 */,
+				948957F7284DA345009EEBBE /* Miley Cyrus - Party in the U.S.A..mp3 */,
+				948957F9284DA345009EEBBE /* Taylor Swift - Paper Rings.mp3 */,
+				948957FA284DA345009EEBBE /* The Weeknd, Ariana Grande - Save Your Tears (with Ariana Grande) (Remix).mp3 */,
+				948957FB284DA345009EEBBE /* TWICE - The Feels.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		9451F2392849A29A00EE859A /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				947E68F9284C4716002B60F0 /* Communication and the Self-Concept Who are you?.pdf */,
+				947E68F8284C4716002B60F0 /* Dash Diet.pdf */,
+				947E68F7284C4716002B60F0 /* Data Management and Human Resource Systems.pdf */,
+				947E68FA284C4716002B60F0 /* Organizational Behavior.pdf */,
+				947E68FB284C4716002B60F0 /* What is an HRIS System?.pdf */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
 		94643DFD283ECC46000E9A56 = {
 			isa = PBXGroup;
 			children = (
+				946B23422846CABA00BC7B9D /* UsersNotes+CoreDataClass.swift */,
+				946B23432846CABA00BC7B9D /* UsersNotes+CoreDataProperties.swift */,
+				946B23382846C30600BC7B9D /* Users+CoreDataClass.swift */,
+				946B23392846C30600BC7B9D /* Users+CoreDataProperties.swift */,
 				94643E08283ECC47000E9A56 /* Project 1 - FunZone */,
 				94643E07283ECC47000E9A56 /* Products */,
 			);
@@ -74,15 +144,21 @@
 		94643E08283ECC47000E9A56 /* Project 1 - FunZone */ = {
 			isa = PBXGroup;
 			children = (
+				9451F2392849A29A00EE859A /* Books */,
+				9451F21B284989DE00EE859A /* Music */,
 				94643E09283ECC47000E9A56 /* AppDelegate.swift */,
 				94643E0B283ECC47000E9A56 /* SceneDelegate.swift */,
 				94643E0D283ECC47000E9A56 /* ViewController.swift */,
 				94643E1D283ECC8B000E9A56 /* LoginViewController.swift */,
 				94643E1F283ECFA5000E9A56 /* SignUpViewController.swift */,
 				94643E21283ED20F000E9A56 /* MusicViewController.swift */,
+				94A822CE2849529A00A2C1AD /* MusicPlayerViewController.swift */,
 				94643E23283ED216000E9A56 /* BookViewController.swift */,
+				9451F2372849A1DC00EE859A /* PDFViewController.swift */,
 				94643E25283ED21E000E9A56 /* SearchViewController.swift */,
 				94643E27283ED225000E9A56 /* NoteViewController.swift */,
+				94D39C8B284172BC00F5C51A /* AddNoteViewController.swift */,
+				94BC0B262846DA55007E2BE4 /* UpdateNoteViewController.swift */,
 				94643E0F283ECC47000E9A56 /* Main.storyboard */,
 				94643E12283ECC4B000E9A56 /* Assets.xcassets */,
 				94643E14283ECC4B000E9A56 /* LaunchScreen.storyboard */,
@@ -90,6 +166,9 @@
 				940A922728400E8600BDEC9D /* MusicTableViewCell.swift */,
 				940A92292840135300BDEC9D /* BookCollectionViewCell.swift */,
 				940A922B28402F1500BDEC9D /* NotesTableViewCell.swift */,
+				946B23332846BD9A00BC7B9D /* Data.xcdatamodeld */,
+				946B23362846BE6100BC7B9D /* UserDBHelper.swift */,
+				946B233C2846C7CE00BC7B9D /* NoteDBHelper.swift */,
 			);
 			path = "Project 1 - FunZone";
 			sourceTree = "<group>";
@@ -152,8 +231,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				947E68FF284C4716002B60F0 /* Organizational Behavior.pdf in Resources */,
+				947E68FE284C4716002B60F0 /* Communication and the Self-Concept Who are you?.pdf in Resources */,
+				948957FD284DA345009EEBBE /* Chanel - SloMo.mp3 in Resources */,
+				948957FE284DA345009EEBBE /* Taylor Swift - Paper Rings.mp3 in Resources */,
+				948957FF284DA345009EEBBE /* The Weeknd, Ariana Grande - Save Your Tears (with Ariana Grande) (Remix).mp3 in Resources */,
+				947E68FC284C4716002B60F0 /* Data Management and Human Resource Systems.pdf in Resources */,
 				94643E16283ECC4B000E9A56 /* LaunchScreen.storyboard in Resources */,
+				948957FC284DA345009EEBBE /* Miley Cyrus - Party in the U.S.A..mp3 in Resources */,
 				94643E13283ECC4B000E9A56 /* Assets.xcassets in Resources */,
+				94895800284DA345009EEBBE /* TWICE - The Feels.mp3 in Resources */,
+				947E6900284C4716002B60F0 /* What is an HRIS System?.pdf in Resources */,
+				947E68FD284C4716002B60F0 /* Dash Diet.pdf in Resources */,
 				94643E11283ECC47000E9A56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,18 +254,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9451F2382849A1DC00EE859A /* PDFViewController.swift in Sources */,
 				94643E22283ED20F000E9A56 /* MusicViewController.swift in Sources */,
 				94643E1E283ECC8B000E9A56 /* LoginViewController.swift in Sources */,
+				946B23372846BE6100BC7B9D /* UserDBHelper.swift in Sources */,
 				94643E26283ED21E000E9A56 /* SearchViewController.swift in Sources */,
 				940A922A2840135300BDEC9D /* BookCollectionViewCell.swift in Sources */,
 				94643E0E283ECC47000E9A56 /* ViewController.swift in Sources */,
 				94643E28283ED225000E9A56 /* NoteViewController.swift in Sources */,
+				94BC0B272846DA55007E2BE4 /* UpdateNoteViewController.swift in Sources */,
+				946B23352846BD9A00BC7B9D /* Data.xcdatamodeld in Sources */,
+				94A822CF2849529A00A2C1AD /* MusicPlayerViewController.swift in Sources */,
+				946B23452846CABA00BC7B9D /* UsersNotes+CoreDataProperties.swift in Sources */,
+				94D39C8C284172BC00F5C51A /* AddNoteViewController.swift in Sources */,
 				940A922828400E8600BDEC9D /* MusicTableViewCell.swift in Sources */,
+				946B233A2846C30600BC7B9D /* Users+CoreDataClass.swift in Sources */,
 				94643E24283ED216000E9A56 /* BookViewController.swift in Sources */,
 				94643E0A283ECC47000E9A56 /* AppDelegate.swift in Sources */,
 				94643E0C283ECC47000E9A56 /* SceneDelegate.swift in Sources */,
+				946B23442846CABA00BC7B9D /* UsersNotes+CoreDataClass.swift in Sources */,
 				94643E20283ECFA5000E9A56 /* SignUpViewController.swift in Sources */,
 				940A922C28402F1500BDEC9D /* NotesTableViewCell.swift in Sources */,
+				946B233B2846C30600BC7B9D /* Users+CoreDataProperties.swift in Sources */,
+				946B233D2846C7CE00BC7B9D /* NoteDBHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -392,6 +492,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		946B23332846BD9A00BC7B9D /* Data.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				946B23342846BD9A00BC7B9D /* UserData.xcdatamodel */,
+			);
+			currentVersion = 946B23342846BD9A00BC7B9D /* UserData.xcdatamodel */;
+			path = Data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 94643DFE283ECC46000E9A56 /* Project object */;
 }

@@ -1,0 +1,21 @@
+{
+  "images" : [
+    {
+      "filename" : "The Weeknd, Ariana Grande - Save Your Tears (with Ariana Grande) (Remix).png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
