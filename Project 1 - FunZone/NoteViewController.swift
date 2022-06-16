@@ -23,7 +23,6 @@ class NoteViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         NoteViewController.notes = NoteDBHelper.notes.getNotes()
         NoteViewController.tableObj = table
 
